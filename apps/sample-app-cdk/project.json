@@ -1,8 +1,8 @@
 {
-  "name": "cdk-v2-test",
+  "name": "sample-app-cdk",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/cdk-v2-test/src",
+  "sourceRoot": "apps/sample-app-cdk/src",
   "targets": {
     "deploy": {
       "executor": "@ago-dev/nx-aws-cdk-v2:deploy",
@@ -20,14 +20,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/cdk-v2-test/**/*.ts"]
+        "lintFilePatterns": ["apps/sample-app-cdk/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/cdk-v2-test/jest.config.ts",
+        "jestConfig": "apps/sample-app-cdk/jest.config.ts",
         "passWithNoTests": true
       }
     }
