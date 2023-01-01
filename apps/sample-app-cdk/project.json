@@ -4,15 +4,15 @@
   "projectType": "application",
   "sourceRoot": "apps/sample-app-cdk/src",
   "targets": {
-    "ls": {
-      "executor": "@nrwl/workspace:run-commands",
+    "ls-project-root": {
+      "executor": "nx:run-commands",
       "options": {
-        "command": "ls app/sample-app-cdk"
+        "command": "ls apps/sample-app-cdk"
       }
     },
     "synth": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": { "command": "cdk synth" }
+      "executor": "nx:run-commands",
+      "options": { "command": "cdk synth", "cwd": "apps/sample-app-cdk" }
     },
     "deploy": {
       "executor": "@ago-dev/nx-aws-cdk-v2:deploy",

@@ -7,12 +7,11 @@ export class AppStack extends Stack {
     super(scope, id, props);
 
     const bucket = new s3.Bucket(this, 'Bucket', {
-      bucketName: 'NextAppBucket',
       removalPolicy: RemovalPolicy.DESTROY,
     });
 
     new s3deploy.BucketDeployment(this, 'BucketDeploy', {
-      sources: [s3deploy.Source.asset('../../../../sample-app/.next')],
+      sources: [s3deploy.Source.asset('../sample-app/.next')],
       destinationBucket: bucket,
     });
   }
