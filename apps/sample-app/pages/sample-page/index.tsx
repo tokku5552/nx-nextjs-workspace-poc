@@ -1,11 +1,9 @@
-import styles from './index.module.css';
-
 /* eslint-disable-next-line */
 export interface SamplePageProps {}
 
 export function SamplePage(props: SamplePageProps) {
   return (
-    <div className={styles['container']}>
+    <div>
       <h1>Welcome to SamplePage!</h1>
     </div>
   );
