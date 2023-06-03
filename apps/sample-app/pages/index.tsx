@@ -1,7 +1,6 @@
 import { ComponentsSampleLibraryComponent } from '@nx-nextjs-workspace-poc/components/sample-library-component';
 import Link from 'next/link';
 import SampleComponent from '../components/sample-component/SampleComponent';
-import styles from './index.module.css';
 
 export function Index() {
   /*
@@ -10,7 +9,7 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.css file.
    */
   return (
-    <div className={styles.page}>
+    <div>
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
